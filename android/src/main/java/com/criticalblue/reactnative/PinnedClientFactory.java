@@ -1,7 +1,6 @@
 package com.criticalblue.reactnative;
 
 import com.facebook.react.modules.network.OkHttpClientFactory;
-import com.facebook.react.modules.network.OkHttpClientProvider;
 import com.facebook.react.modules.network.ReactCookieJarContainer;
 
 import java.util.concurrent.TimeUnit;
@@ -29,7 +28,7 @@ public class PinnedClientFactory implements OkHttpClientFactory {
         }
         
 
-        return OkHttpClientProvider.enableTls12OnPreLollipop(client).build();
+        return client.build();
     }
 }
 
